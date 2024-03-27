@@ -1,0 +1,71 @@
+import java.util.*;
+class Marksheet_std
+{
+	int sno,dm,fds,oop,os,cg,sum;
+	float per;
+	Scanner sc =new Scanner(System.in);
+	void accpet()
+	{
+		System.out.println("\n Enter the roll no of student:");
+		sno=sc.nextInt();
+		System.out.println("\n Enter the marks of DM:");
+		dm=sc.nextInt();
+		System.out.println("\n Enter the marks of CG:");
+		cg=sc.nextInt();
+		System.out.println("\n Enter the marks of OOP:");
+		oop=sc.nextInt();
+		System.out.println("\n Enter the marks of OS:");
+		os=sc.nextInt();
+		System.out.println("\n Enter the marks of FDS:");
+		fds=sc.nextInt();
+		
+		marks=sc.nextInt();
+	}
+	void percentage()
+	{
+		sum=dm+fds+oop+os+cg;
+		per=sum/5;
+		System.out.println("\n Percentage is :"+per);
+	}
+	void grade()
+	{
+		if(per>=85)
+		{
+			System.out.println("\n Student has got grade A");
+		}
+		if else(per>=75 && per<85)
+		{
+			System.out.println("\n Student has got grade B");
+		}
+		if else(per>=65 && per<75)
+		{
+			System.out.println("\n Student has got grade C");
+		}
+		if else(per>=55 && per<65)
+		{
+			System.out.println("\n Student has got grade D");
+		}
+		else
+		{
+			System.out.println("\n Student has failed");
+		}
+	}
+	void display()
+	{
+		System.out.println("\n Roll no="+sno);
+		System.out.println("\n Marks of dm="+dm);
+		System.out.println("\nMarks of cg="+cg);
+		System.out.println("\n Marks of oop="+oop);
+		System.out.println("\n Marks of os="+os);
+		System.out.println("\n Marks of fds="+fds)
+	}
+	public static void main(String ar[])
+	{
+		Student s=new Student();
+		s.accept();
+		s.display();
+		s.percentage();
+		s.grade();
+	}
+}
+	
